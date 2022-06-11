@@ -12,6 +12,23 @@ public class Loja {
     private String estado;
     ArrayList<Produto> produtos = new ArrayList<Produto>();
 
+    public Loja(String nome, String endereco, String bairro, String cidade, String estado) { //Construtor que não possui uma lista de produtos definida
+        this.nome = nome;
+        this.endereco = endereco;
+        this.bairro = bairro;
+        this.cidade = cidade;
+        this.estado = estado;
+    }
+
+    public Loja(String nome, String endereco, String bairro, String cidade, String estado, ArrayList<Produto> produtos) { //Construtor que já recebe uma lista produtos definida
+        this.nome = nome;
+        this.endereco = endereco;
+        this.bairro = bairro;
+        this.cidade = cidade;
+        this.estado = estado;
+        this.produtos = produtos;
+    }
+
     public String getNome() {
         return nome;
     }
@@ -52,34 +69,33 @@ public class Loja {
         this.estado = estado;
     }
 
-    ///Levantar exceção produtoJaExistente
-    void incluirProduto(Produto produto) throws ProdutoJaExistente {
-        for(Produto p: produtos){
-            if(p == produto){
-                throw new ProdutoJaExistente();
-            }
-            else {
-                produtos.add(produto);
-            }
-        }
-    }
-
-    void excluirProduto(Produto produto) throws ProdutoNaoExistente {
-
+    boolean procurarProduto(Produto produto){ //Função para procurar determinado produto dentro da ArrayList. Função criada a fim de reutilizar código
         boolean achou = false;
-
-        for(Produto p: produtos){ //Varrer a lista para encontrar o produto passado no parâmetro
+        for(Produto p: produtos){
             if(p == produto){
                 achou = true;
                 break;
             }
         }
+        return achou;
+    }
 
-        if(achou){
-            produtos.remove(produto);
+
+    void incluirProduto(Produto produto) throws ProdutoJaExistente {
+        if(procurarProduto(produto)){
+            throw new ProdutoJaExistente(); //Se o produto já existir, ele levanta exceção
         }
         else {
-            throw new ProdutoNaoExistente();
+            produtos.add(produto);
+        }
+    }
+
+    void excluirProduto(Produto produto) throws ProdutoNaoExistente {
+        if(!procurarProduto(produto)){
+            throw new ProdutoNaoExistente(); //Se o produto especificado não existir dentro da ArrayList, ele levanta exceção
+        }
+        else {
+            produtos.remove(produto);
         }
     }
 
