@@ -99,8 +99,34 @@ public class Loja {
         }
     }
 
-    void alterarProduto(){
+    void alterarProduto(Produto produto) throws ProdutoNaoExistente{
+        boolean achou = false;
+        for(Produto p: produtos){
+            if(p.getNome() == produto.getNome()){ //O parametro para o produto ser alterado é o nome do produto.
+                p = produto;
+                break;
+            }
+        }
+        if(!achou){
+            throw new ProdutoNaoExistente();
+        }
+    }
 
+    Produto consultarProduto(String nomeProduto) throws ProdutoNaoExistente{
+        boolean achou = false;
+        Produto produtoProcurado = null;
+        for(Produto p: produtos){
+            if(p.getNome() == nomeProduto){
+                achou = true;
+                produtoProcurado = p;
+            }
+        }
+        if(achou){
+            return produtoProcurado;
+        }
+        else {
+            throw new ProdutoNaoExistente();
+        }
     }
 
 }
