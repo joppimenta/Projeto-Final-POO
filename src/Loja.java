@@ -2,6 +2,7 @@ import exceptions.ProdutoJaExistente;
 import exceptions.ProdutoNaoExistente;
 
 import java.util.ArrayList;
+import java.util.Objects;
 
 public class Loja {
 
@@ -102,7 +103,8 @@ public class Loja {
     void alterarProduto(Produto produto) throws ProdutoNaoExistente{
         boolean achou = false;
         for(Produto p: produtos){
-            if(p.getNome() == produto.getNome()){ //O parametro para o produto ser alterado é o nome do produto.
+            if(p.getNome().equals(produto.getNome())){ //O parametro para o produto ser alterado é o nome do produto.
+                achou = true;
                 p = produto;
                 break;
             }
@@ -116,7 +118,7 @@ public class Loja {
         boolean achou = false;
         Produto produtoProcurado = null;
         for(Produto p: produtos){
-            if(p.getNome() == nomeProduto){
+            if(p.getNome().equals(nomeProduto)){
                 achou = true;
                 produtoProcurado = p;
             }
