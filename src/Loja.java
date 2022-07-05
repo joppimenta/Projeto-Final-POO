@@ -131,4 +131,24 @@ public class Loja {
         }
     }
 
+    public static void main(String[] args) throws ProdutoJaExistente, ProdutoNaoExistente {
+        Produto produtoTeste = new Produto("Vassoura", 2, 13.50);
+        Produto produtoTeste2 = new Produto("Lápis", 5, 3);
+        Loja novaLoja = new Loja("Claudinha LOja", "RUa 44", "Jangurussu", "Fortaleza", "Ceara");
+
+        novaLoja.incluirProduto(produtoTeste);
+        novaLoja.incluirProduto(produtoTeste2);
+
+        for(Produto p: novaLoja.produtos){
+            System.out.println(p.getNome());
+        }
+
+        novaLoja.excluirProduto(produtoTeste);
+
+        for(Produto p: novaLoja.produtos){
+            System.out.println(p.getNome());
+        }
+
+    }
+
 }
