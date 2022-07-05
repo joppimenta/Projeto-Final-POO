@@ -2,10 +2,10 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="45fe8ebb-cdfb-4fb4-ab9b-64cc193a1b92" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/src/Sistema.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/exceptions/LojaNaoExistente.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/exceptions/LojaJaExistente.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/Loja.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Loja.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Sistema.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Sistema.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -47,6 +47,28 @@
     &quot;project.structure.side.proportion&quot;: &quot;0.2&quot;
   }
 }</component>
+  <component name="RunManager" selected="Application.Sistema">
+    <configuration name="Loja" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="Loja" />
+      <module name="ProjetoFinal-Poo" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="Sistema" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="Sistema" />
+      <module name="ProjetoFinal-Poo" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <recent_temporary>
+      <list>
+        <item itemvalue="Application.Sistema" />
+        <item itemvalue="Application.Loja" />
+      </list>
+    </recent_temporary>
+  </component>
   <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
   <component name="TaskManager">
     <task active="true" id="Default" summary="Default task">
