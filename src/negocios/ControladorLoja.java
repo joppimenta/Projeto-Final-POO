@@ -5,11 +5,11 @@ import exceptions.LojaJaExistente;
 import exceptions.LojaNaoExistente;
 
 import java.util.ArrayList;
+import java.util.List;
 
 public class ControladorLoja {
 
     ArrayList<Loja> lojas = new ArrayList<Loja>();
-
 
     public boolean existeLoja(String id){
         boolean achou = false;
@@ -59,5 +59,25 @@ public class ControladorLoja {
         else {
             throw new LojaNaoExistente();
         }
+    }
+
+    List<Loja> listarLojasBairro(String bairro){
+        ArrayList<Loja> temporario = new ArrayList<>();
+        for(Loja l: lojas){
+            if(l.getBairro().equals(bairro)){
+                temporario.add(l);
+            }
+        }
+        return temporario;
+    }
+
+    List<Loja> listarLojasCidade(String cidade){
+        ArrayList<Loja> temporario = new ArrayList<>();
+        for(Loja l: lojas){
+            if(l.getCidade().equals(cidade)){
+                temporario.add(l);
+            }
+        }
+        return temporario;
     }
 }
