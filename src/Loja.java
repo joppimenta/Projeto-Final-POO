@@ -13,6 +13,8 @@ public class Loja {
     private String estado;
     ArrayList<Produto> produtos = new ArrayList<Produto>();
 
+    private String id;
+
     public Loja(String nome, String endereco, String bairro, String cidade, String estado) { //Construtor que não possui uma lista de produtos definida
         this.nome = nome;
         this.endereco = endereco;
@@ -70,10 +72,18 @@ public class Loja {
         this.estado = estado;
     }
 
-    boolean procurarProduto(Produto produto){ //Função para procurar determinado produto dentro da ArrayList. Função criada a fim de reutilizar código
+    public String getId(){
+        return id;
+    }
+
+    public void setId(String id){
+        this.id = id;
+    }
+
+    boolean existeProduto(String id){ //Função para procurar determinado produto dentro da ArrayList. Função criada a fim de reutilizar código
         boolean achou = false;
         for(Produto p: produtos){
-            if(p == produto){
+            if(p.getId() == id){
                 achou = true;
                 break;
             }
@@ -82,8 +92,8 @@ public class Loja {
     }
 
 
-    void incluirProduto(Produto produto) throws ProdutoJaExistente {
-        if(procurarProduto(produto)){
+    void inserir(Produto produto) throws ProdutoJaExistente {
+        if(existeProduto(produto.getId())){
             throw new ProdutoJaExistente(); //Se o produto já existir, ele levanta exceção
         }
         else {
@@ -91,8 +101,8 @@ public class Loja {
         }
     }
 
-    void excluirProduto(Produto produto) throws ProdutoNaoExistente {
-        if(!procurarProduto(produto)){
+    void excluir(Produto produto) throws ProdutoNaoExistente {
+        if(!existeProduto(produto.getId())){
             throw new ProdutoNaoExistente(); //Se o produto especificado não existir dentro da ArrayList, ele levanta exceção
         }
         else {
@@ -100,7 +110,7 @@ public class Loja {
         }
     }
 
-    void alterarProduto(Produto produto) throws ProdutoNaoExistente{
+    void alterar(Produto produto) throws ProdutoNaoExistente{
         boolean achou = false;
         for(Produto p: produtos){
             if(p.getNome().equals(produto.getNome())){ //O parametro para o produto ser alterado é o nome do produto.
@@ -114,41 +124,13 @@ public class Loja {
         }
     }
 
-    Produto consultarProduto(String nomeProduto) throws ProdutoNaoExistente{
-        boolean achou = false;
-        Produto produtoProcurado = null;
-        for(Produto p: produtos){
-            if(p.getNome().equals(nomeProduto)){
-                achou = true;
-                produtoProcurado = p;
-            }
+    Produto consultar(Produto produto) throws ProdutoNaoExistente{
+        if(existeProduto(produto.getId())){
+            return produto;
         }
-        if(achou){
-            return produtoProcurado;
-        }
-        else {
+        else{
             throw new ProdutoNaoExistente();
         }
-    }
-
-    public static void main(String[] args) throws ProdutoJaExistente, ProdutoNaoExistente {
-        Produto produtoTeste = new Produto("Vassoura", 2, 13.50);
-        Produto produtoTeste2 = new Produto("Lápis", 5, 3);
-        Loja novaLoja = new Loja("Claudinha LOja", "RUa 44", "Jangurussu", "Fortaleza", "Ceara");
-
-        novaLoja.incluirProduto(produtoTeste);
-        novaLoja.incluirProduto(produtoTeste2);
-
-        for(Produto p: novaLoja.produtos){
-            System.out.println(p.getNome());
-        }
-
-        novaLoja.excluirProduto(produtoTeste);
-
-        for(Produto p: novaLoja.produtos){
-            System.out.println(p.getNome());
-        }
-
     }
 
 }
