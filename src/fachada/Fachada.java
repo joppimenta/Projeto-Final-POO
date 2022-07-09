@@ -9,7 +9,7 @@ public class Fachada {
     private ControladorLoja controladorLoja;
 
     public Fachada(){
-
+        controladorLoja = new ControladorLoja();
     }
 
     public void incluirLoja(Loja loja) throws LojaJaExistente {

@@ -5,6 +5,7 @@ import exceptions.ProdutoJaExistente;
 import exceptions.ProdutoNaoExistente;
 
 import java.util.ArrayList;
+import java.util.List;
 
 public class Loja {
 
