@@ -1,8 +1,10 @@
+package dados;
+
+import dados.Produto;
 import exceptions.ProdutoJaExistente;
 import exceptions.ProdutoNaoExistente;
 
 import java.util.ArrayList;
-import java.util.Objects;
 
 public class Loja {
 

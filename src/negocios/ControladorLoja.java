@@ -1,8 +1,10 @@
+package negocios;
+
+import dados.Loja;
 import exceptions.LojaJaExistente;
 import exceptions.LojaNaoExistente;
 
 import java.util.ArrayList;
-import java.util.Objects;
 
 public class ControladorLoja {
 
