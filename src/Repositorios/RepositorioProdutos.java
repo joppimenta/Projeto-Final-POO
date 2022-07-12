@@ -17,8 +17,8 @@ public class RepositorioProdutos {
         this.listaProdutos.put(prod.getNome(), prod);
     }
 
-    public void removerProduto(Produto prod){
-        this.listaProdutos.remove(prod.getNome());
+    public void removerProduto(String nomeProduto){
+        this.listaProdutos.remove(nomeProduto);
     }
 
     public Collection<Produto> listaProduto(){

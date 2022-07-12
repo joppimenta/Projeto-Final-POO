@@ -84,9 +84,6 @@ public class Principal extends JFrame {
         setVisible(true);
     }
 
-    public AdicionarProdutoGui() {
-        return adicionarProdutoGui;
-    }
 
     public static void main(String[] args) {
         new Principal();

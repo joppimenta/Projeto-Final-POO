@@ -34,9 +34,9 @@ public class ControladorProduto {
         repositorioProdutos.alterarProduto(prod);
     }
 
-    public void removeProduto(Produto prod) throws ProdutoNaoExistente{
-        consultaProduto(prod.getNome());
-        repositorioProdutos.removerProduto(prod);
+    public void removeProduto(String produtoNome) throws ProdutoNaoExistente{
+        consultaProduto(produtoNome);
+        repositorioProdutos.removerProduto(produtoNome);
     }
 
     public Produto consultaProduto(String prod) throws ProdutoNaoExistente{

@@ -42,7 +42,7 @@
     "project.structure.side.proportion": "0.2"
   }
 }]]></component>
-  <component name="RunManager" selected="Application.AdicionarProdutoGui">
+  <component name="RunManager" selected="Application.RemoverProdutoGui">
     <configuration name="AdicionarProdutoGui" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
       <option name="MAIN_CLASS_NAME" value="gui.AdicionarProdutoGui" />
       <module name="ProjetoFinal-Poo" />
@@ -76,6 +76,19 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
+    <configuration name="RemoverProdutoGui" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="gui.RemoverProdutoGui" />
+      <module name="ProjetoFinal-Poo" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="gui.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
     <configuration name="Sistema" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
       <option name="MAIN_CLASS_NAME" value="Sistema" />
       <module name="ProjetoFinal-Poo" />
@@ -85,6 +98,7 @@
     </configuration>
     <recent_temporary>
       <list>
+        <item itemvalue="Application.RemoverProdutoGui" />
         <item itemvalue="Application.AdicionarProdutoGui" />
         <item itemvalue="Application.Principal" />
         <item itemvalue="Application.Sistema" />
