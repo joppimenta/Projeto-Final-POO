@@ -18,7 +18,7 @@ public class Principal extends JFrame {
     private JButton consultarLoja = new JButton("Consultar Loja");
 
     private JButton adicionarProdutoLoja = new JButton("Adicionar Produto em uma Loja");
-    private JButton removerProdutoLoja = new JButton("Remover Produto em uma Loja");
+    private JButton removerProdutoLoja = new JButton("Remover Produto de uma Loja");
     private JButton listarLojaBairro = new JButton("Listar Loja Por Bairro");
     private JButton listarLojaCidade = new JButton("Listar Loja por Cidade");
 
@@ -38,6 +38,7 @@ public class Principal extends JFrame {
 
     public Principal(){
         super();
+        setTitle("Sistema de Gerenciamento de Lojas e Seus Produtos");
         Container c = getContentPane();
         GridBagConstraints gbc = new GridBagConstraints();
 

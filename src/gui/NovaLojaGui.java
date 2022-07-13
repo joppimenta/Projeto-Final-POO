@@ -35,7 +35,6 @@ public class NovaLojaGui extends JFrame {
         GridBagConstraints gbc = new GridBagConstraints();
         c.setLayout(new GridBagLayout());
 
-
         gbc.gridx = 0;
         gbc.gridy = 0;
 
