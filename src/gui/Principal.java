@@ -61,7 +61,7 @@ public class Principal extends JFrame {
         c.add(consultarProduto, gbc);
 
         setDefaultCloseOperation(EXIT_ON_CLOSE);
-        setSize(500, 200);
+        setSize(1200, 400);
 
         gbc.gridx = 0;
         gbc.gridy = 1;
