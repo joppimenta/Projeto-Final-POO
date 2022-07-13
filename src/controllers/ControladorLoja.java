@@ -2,6 +2,7 @@ package controllers;
 
 import java.util.ArrayList;
 import java.util.Collection;
+import java.util.List;
 
 import Repositorios.RepositorioLojas;
 import Repositorios.RepositorioProdutos;
@@ -97,11 +98,12 @@ public class ControladorLoja {
      * @throws ListaVazia
      */
     public Collection<Loja> listaLojaBairro(String bairro) throws ListaVazia{
-        Collection<Loja> lista = repositorioLojas.listaLoja();
+        List<Loja> lista = new ArrayList<>(repositorioLojas.listaLoja().stream().toList());
         if (lista == null || lista.size() == 0) {
             throw new ListaVazia();
         }
         lista.removeIf(n -> (!n.getBairro().equalsIgnoreCase(bairro)));
+
         return lista;
     }
 
@@ -111,11 +113,12 @@ public class ControladorLoja {
      * @throws ListaVazia
      */
     public Collection<Loja> listaLojaCidade(String cidade) throws ListaVazia{
-        Collection<Loja> lista = repositorioLojas.listaLoja();
+        List<Loja> lista = new ArrayList<>(repositorioLojas.listaLoja().stream().toList());
         if (lista == null || lista.size() == 0) {
             throw new ListaVazia();
         }
         lista.removeIf(n -> (!n.getCidade().equalsIgnoreCase(cidade)));
+
         return lista;
     }
 
