@@ -99,6 +99,7 @@ public class Principal extends JFrame {
         removerLojaGui = new RemoverLojaGui();
         adicionarProdutoGui = new AdicionarProdutoGui();
         consultarProdutoGui = new ConsultarProdutoGui();
+        consultarLojaGui = new ConsultarLojaGui();
         alterarProdutoGui = new AlterarProdutoGui();
         novaLojaGui = new NovaLojaGui();
         adicionarProdutoLojaGui = new AdicionarProdutoLojaGui();
