@@ -1,7 +1,6 @@
 package gui;
 
 import exceptions.LojaNaoExistente;
-import exceptions.ProdutoNaoExistente;
 import fachada.Fachada;
 
 import javax.swing.*;

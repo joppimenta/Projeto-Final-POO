@@ -4,7 +4,6 @@ import data.Loja;
 import data.Produto;
 import exceptions.ListaVazia;
 import exceptions.LojaNaoExistente;
-import exceptions.ProdutoJaExistente;
 import exceptions.ProdutoNaoExistente;
 import fachada.Fachada;
 
