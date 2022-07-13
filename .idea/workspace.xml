@@ -2,9 +2,16 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="45fe8ebb-cdfb-4fb4-ab9b-64cc193a1b92" name="Changes" comment="">
-      <change beforePath="$PROJECT_DIR$/src/gui/ListarLojaBairroGui.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/gui/ListarLojaBairroGui.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/gui/ListarLojaEstadoGui.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/gui/ListarLojaCidadeGui.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/gui/Principal.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/gui/Principal.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Repositorios/RepositorioLojas.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Repositorios/RepositorioLojas.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Repositorios/RepositorioProdutos.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Repositorios/RepositorioProdutos.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Sistema.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/controllers/ControladorLoja.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/controllers/ControladorLoja.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/controllers/ControladorProduto.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/controllers/ControladorProduto.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/data/Loja.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/data/Loja.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/data/Produto.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/data/Produto.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/fachada/Fachada.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/fachada/Fachada.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -43,7 +50,7 @@
   &quot;keyToString&quot;: {
     &quot;RunOnceActivity.OpenProjectViewOnStart&quot;: &quot;true&quot;,
     &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
-    &quot;last_opened_file_path&quot;: &quot;/home/jppimenta/Downloads/Projeto-Final-POO-refactoring&quot;,
+    &quot;last_opened_file_path&quot;: &quot;/home/fabio-gabriel/Desktop/coding/Projeto-Final-POO&quot;,
     &quot;project.structure.last.edited&quot;: &quot;Modules&quot;,
     &quot;project.structure.proportion&quot;: &quot;0.0&quot;,
     &quot;project.structure.side.proportion&quot;: &quot;0.2&quot;
