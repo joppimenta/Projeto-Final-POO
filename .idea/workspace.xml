@@ -2,17 +2,9 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="45fe8ebb-cdfb-4fb4-ab9b-64cc193a1b92" name="Changes" comment="">
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/gui/AdicionarProdutoGui.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/gui/AdicionarProdutoGui.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/gui/AdicionarProdutoLojaGui.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/gui/AdicionarProdutoLojaGui.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/gui/AlteraLojaGui.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/gui/AlteraLojaGui.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/gui/AlterarProdutoGui.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/gui/AlterarProdutoGui.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/gui/ConsultarProdutoGui.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/gui/ConsultarProdutoGui.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/gui/NovaLojaGui.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/gui/NovaLojaGui.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/gui/ListarLojaBairroGui.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/gui/ListarLojaBairroGui.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/gui/ListarLojaEstadoGui.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/gui/ListarLojaCidadeGui.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/gui/Principal.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/gui/Principal.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/gui/RemoveLojaGui.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/gui/RemoveLojaGui.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/gui/RemoverProdutoGui.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/gui/RemoverProdutoGui.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/gui/RemoverProdutoLojaGui.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/gui/RemoverProdutoLojaGui.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />

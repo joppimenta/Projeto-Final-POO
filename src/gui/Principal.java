@@ -33,6 +33,8 @@ public class Principal extends JFrame {
     private AlteraLojaGui alteraLojaGui;
     private AdicionarProdutoLojaGui adicionarProdutoLojaGui;
     private RemoverProdutoLojaGui removerProdutoLojaGui;
+    private ListarLojaBairroGui listarLojaBairroGui;
+    private ListarLojaCidadeGui listarLojaCidadeGui;
 
 
     public Principal(){
@@ -102,6 +104,8 @@ public class Principal extends JFrame {
         novaLojaGui = new NovaLojaGui();
         adicionarProdutoLojaGui = new AdicionarProdutoLojaGui();
         removerProdutoLojaGui = new RemoverProdutoLojaGui();
+        listarLojaBairroGui = new ListarLojaBairroGui();
+        listarLojaCidadeGui = new ListarLojaCidadeGui();
 
         criarProduto.addActionListener(new ActionListener() {
             @Override
@@ -163,6 +167,20 @@ public class Principal extends JFrame {
             @Override
             public void actionPerformed(ActionEvent e) {
                 removerProdutoLojaGui.setVisible(true);
+            }
+        });
+
+        listarLojaCidade.addActionListener(new ActionListener() {
+            @Override
+            public void actionPerformed(ActionEvent e) {
+                listarLojaCidadeGui.setVisible(true);
+            }
+        });
+
+        listarLojaBairro.addActionListener(new ActionListener() {
+            @Override
+            public void actionPerformed(ActionEvent e) {
+                listarLojaBairroGui.setVisible(true);
             }
         });
     }

@@ -43,6 +43,7 @@ public class RemoveLojaGui extends JFrame {
             public void actionPerformed(ActionEvent e) {
                 try {
                     Fachada.getInstancia().removeLoja(nomeLoja.getText());
+                    JOptionPane.showMessageDialog(null, "Loja removida com sucesso");
                 } catch (LojaNaoExistente ex) {
                     JOptionPane.showMessageDialog(null, "Essa loja não existe");
                 }

@@ -9,15 +9,14 @@ import java.awt.*;
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
 import java.util.Collection;
-import java.util.List;
 
-public class ListarLojaEstadoGui extends JFrame {
-    private JLabel bairroLabel = new JLabel("Que bairro você quer consultar as lojas?");
-    private JTextField bairroField = new JTextField();
-    private JButton listarLojaBairroBotao = new JButton("Consultar");
+public class ListarLojaCidadeGui extends JFrame {
+    private JLabel cidadeLabel = new JLabel("Que cidade você quer consultar as lojas?");
+    private JTextField cidadeField = new JTextField();
+    private JButton listarLojaCidadeBotao = new JButton("Consultar");
     private JTextArea textArea = new JTextArea();
 
-    public ListarLojaEstadoGui() {
+    public ListarLojaCidadeGui() {
         JPanel panel1 = new JPanel();
         panel1.setLayout(new GridBagLayout());
         GridBagConstraints gbc = new GridBagConstraints();
@@ -26,15 +25,15 @@ public class ListarLojaEstadoGui extends JFrame {
         gbc.gridx = 0;
         gbc.gridy = 0;
 
-        panel1.add(bairroLabel, gbc);
+        panel1.add(cidadeLabel, gbc);
 
         gbc.gridx = 1;
 
-        bairroField.setColumns(7);
-        panel1.add(bairroField, gbc);
+        cidadeField.setColumns(7);
+        panel1.add(cidadeField, gbc);
 
         gbc.gridy = 1;
-        panel1.add(listarLojaBairroBotao, gbc);
+        panel1.add(listarLojaCidadeBotao, gbc);
 
         add(panel1, BorderLayout.NORTH);
 
@@ -46,16 +45,17 @@ public class ListarLojaEstadoGui extends JFrame {
 
         setSize(500, 500);
 
-        listarLojaBairroBotao.addActionListener(new ActionListener() {
+        listarLojaCidadeBotao.addActionListener(new ActionListener() {
             @Override
             public void actionPerformed(ActionEvent e) {
                 try {
-                    Collection<Loja> listaLojasBairro = Fachada.getInstancia().listaLojaBairro(bairroField.getText());
+                    Collection<Loja> listaLojasBairro = Fachada.getInstancia().listaLojaBairro(cidadeField.getText());
                     String result = "";
                     for(Loja l : listaLojasBairro){
                         result = result + "Nome da loja: " + l.getNome() + System.lineSeparator() + "Endereço: " + l.getEndereco() +
                                 System.lineSeparator() + "Bairro: " + l.getBairro() + System.lineSeparator() + "Cidade: " + l.getCidade() +
                                 System.lineSeparator() + "Estado: " + l.getEstado() + System.lineSeparator();
+                        textArea.setText(result);
                     }
 
                 } catch (ListaVazia ex) {
