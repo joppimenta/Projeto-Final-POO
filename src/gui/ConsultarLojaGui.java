@@ -15,7 +15,7 @@ public class ConsultarLojaGui extends JFrame {
     private JLabel questionLabel = new JLabel("Que Loja você deseja consultar?");
 
     private JTextArea lojaNome = new JTextArea();
-    private JTextField lojaConsultada = new JTextField();
+    private JTextArea lojaConsultada = new JTextArea();
     private JButton consultarButao = new JButton("Consultar Loja");
 
     public ConsultarLojaGui(){
@@ -54,9 +54,9 @@ public class ConsultarLojaGui extends JFrame {
                     Loja temp = Fachada.getInstancia().consultaLoja(lojaNome.getText());
                     String resp = "Nome da loja: " + temp.getNome() + System.lineSeparator() + "Endereço: " + temp.getEndereco()
                             + System.lineSeparator() + "Bairro: " + temp.getBairro() + System.lineSeparator() + "Cidade: " + temp.getCidade() + System.lineSeparator() + "Estado: " + temp.getEstado() + System.lineSeparator();
-                    String produtos = "Lista de produtos: \n";
+                    String produtos = "Lista de produtos: " + System.lineSeparator();
                     for (Produto produto : temp.getProdutos()) {
-                        produtos = produtos + produto.getNome() + "\n";
+                        produtos = produtos + produto.getNome() + System.lineSeparator();
                     }
                     lojaConsultada.setText(resp + produtos);
                 } catch(LojaNaoExistente ex) {

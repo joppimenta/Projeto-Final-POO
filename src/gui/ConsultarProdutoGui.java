@@ -13,7 +13,7 @@ public class ConsultarProdutoGui extends JFrame {
 
     private JLabel questionLabel = new JLabel("Que produto você deseja consultar?");
     private JTextArea produto = new JTextArea();
-    private JTextField produtoConsultado = new JTextField();
+    private JTextArea produtoConsultado = new JTextArea();
     private JButton consultarButao = new JButton("Consultar produto");
 
     public ConsultarProdutoGui(){

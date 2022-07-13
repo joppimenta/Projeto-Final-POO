@@ -29,15 +29,11 @@ public class ControladorLoja {
      * @throws LojaJaExistente
      * @throws LojaNaoExistente
      */
-    public void novaLoja(Loja loja) throws LojaJaExistente, LojaNaoExistente{
-        Loja loj = null;
-        try {
-            loj = consultaLoja(loja.getNome());
-        } catch (LojaNaoExistente e) {
-        }
-        if (loj == null) {
+    public void novaLoja(Loja loja) throws LojaJaExistente{
+        if (repositorioLojas.consultaLoja(loja.getNome()) == null){
             repositorioLojas.novaLoja(loja);
-        } else {
+        }
+        else{
             throw new LojaJaExistente();
         }
     }
@@ -105,11 +101,7 @@ public class ControladorLoja {
         if (lista == null || lista.size() == 0) {
             throw new ListaVazia();
         }
-        for (Loja loja : lista) {
-            if (!loja.getBairro().equalsIgnoreCase(bairro)) {
-                lista.remove(loja);
-            }
-        }
+        lista.removeIf(n -> (!n.getBairro().equalsIgnoreCase(bairro)));
         return lista;
     }
 
@@ -123,11 +115,7 @@ public class ControladorLoja {
         if (lista == null || lista.size() == 0) {
             throw new ListaVazia();
         }
-        for (Loja loja : lista) {
-            if (!loja.getCidade().equalsIgnoreCase(cidade)) {
-                lista.remove(loja);
-            }
-        }
+        lista.removeIf(n -> (!n.getCidade().equalsIgnoreCase(cidade)));
         return lista;
     }
 
