@@ -1,8 +1,6 @@
 package gui;
 
 import data.Produto;
-import exceptions.PreenchimentoInvalido;
-import exceptions.ProdutoJaExistente;
 import exceptions.ProdutoNaoExistente;
 import fachada.Fachada;
 

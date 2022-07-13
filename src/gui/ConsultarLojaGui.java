@@ -3,7 +3,6 @@ package gui;
 import data.Loja;
 import data.Produto;
 import exceptions.LojaNaoExistente;
-import exceptions.ProdutoNaoExistente;
 import fachada.Fachada;
 
 import javax.swing.*;
@@ -55,6 +54,11 @@ public class ConsultarLojaGui extends JFrame {
                     Loja temp = Fachada.getInstancia().consultaLoja(lojaNome.getText());
                     String resp = "Nome da loja: " + temp.getNome() + System.lineSeparator() + "Endereço: " + temp.getEndereco()
                             + System.lineSeparator() + "Bairro: " + temp.getBairro() + System.lineSeparator() + "Cidade: " + temp.getCidade() + System.lineSeparator() + "Estado: " + temp.getEstado() + System.lineSeparator();
+                    String produtos = "Lista de produtos: \n";
+                    for (Produto produto : temp.getProdutos()) {
+                        produtos = produtos + produto.getNome() + "\n";
+                    }
+                    lojaConsultada.setText(resp + produtos);
                 } catch(LojaNaoExistente ex) {
                     JOptionPane.showMessageDialog(null, "Loja especificada não existe");
                 }

@@ -56,7 +56,7 @@ public class AdicionarProdutoLojaGui extends JFrame {
             public void actionPerformed(ActionEvent e) {
                 try {
                     Loja lojaTemp = Fachada.getInstancia().consultaLoja(lojaField.getText());
-                    Produto produtoTemp = Fachada.getInstancia().consultaProduto(produtoLabel.getText());
+                    Produto produtoTemp = Fachada.getInstancia().consultaProduto(produtoField.getText());
                     Fachada.getInstancia().adicionarProduto(lojaTemp, produtoTemp);
                 } catch (LojaNaoExistente ex) {
                     JOptionPane.showMessageDialog(null, "Essa loja não existe");

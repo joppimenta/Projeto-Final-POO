@@ -9,7 +9,6 @@ import java.awt.*;
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
 import java.util.Collection;
-import java.util.List;
 
 public class ListarLojaBairroGui extends JFrame {
     private JLabel bairroLabel = new JLabel("Que bairro você quer consultar as lojas?");

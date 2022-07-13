@@ -1,7 +1,6 @@
 package gui;
 
 import data.Loja;
-import data.Produto;
 import exceptions.*;
 import fachada.Fachada;
 
