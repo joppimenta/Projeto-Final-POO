@@ -91,14 +91,15 @@ public class NovaLojaGui extends JFrame {
         criarLojaBotao.addActionListener(new ActionListener() {
             @Override
             public void actionPerformed(ActionEvent e) {
-                Loja temp = new Loja(nomeLoja.getText(), endereco.getText(), bairro.getText(), cidade.getText(), estado.getText());
-                if(nomeLoja.getText().equalsIgnoreCase("") || endereco.getText().equalsIgnoreCase("") || bairro.getText().equalsIgnoreCase("") ||
-                cidade.getText().equalsIgnoreCase("") || estado.getText().equalsIgnoreCase("")){
-                    JOptionPane.showMessageDialog(null, "Preencha os campos corretamente");
-                }
                 try {
+                    Loja temp = new Loja(nomeLoja.getText(), endereco.getText(), bairro.getText(), cidade.getText(), estado.getText());
+                    if(nomeLoja.getText().equalsIgnoreCase("") || endereco.getText().equalsIgnoreCase("") || bairro.getText().equalsIgnoreCase("") ||
+                    cidade.getText().equalsIgnoreCase("") || estado.getText().equalsIgnoreCase("")){
+                        JOptionPane.showMessageDialog(null, "Preencha os campos corretamente");
+                    }
                     Fachada.getInstancia().novaLoja(temp);
                     JOptionPane.showMessageDialog(null, "Loja adicionada com sucesso");
+                    setVisible(false);
                 } catch (LojaNaoExistente ex) {
                 } catch (LojaJaExistente ex) {
                     JOptionPane.showMessageDialog(null, "Essa loja já existe");

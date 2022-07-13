@@ -35,15 +35,10 @@ public class ControladorProduto {
      * @throws ProdutoNaoExistente
      */
     public void novoProduto(Produto prod) throws ProdutoJaExistente, ProdutoNaoExistente{
-        Produto produto = null;
-        try {
-            produto = consultaProduto(prod.getNome());
-        } catch (ProdutoNaoExistente e) {
-        }
-
-        if (produto == null) {
+        if (repositorioProdutos.consultaProduto(prod.getNome()) == null){
             repositorioProdutos.novoProduto(prod);
-        } else {
+        }
+        else{
             throw new ProdutoJaExistente();
         }
     }

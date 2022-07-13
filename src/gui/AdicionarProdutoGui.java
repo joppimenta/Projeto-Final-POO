@@ -69,16 +69,15 @@ public class AdicionarProdutoGui extends JFrame {
         criarProdutoBotao.addActionListener(new ActionListener() {
             @Override
             public void actionPerformed(ActionEvent e) {
-                Produto temp = new Produto(nomeProduto.getText(), Integer.parseInt(quantidadeEmEstoque.getText()), Double.parseDouble(preco.getText()));
-                if(nomeProduto.getText().equalsIgnoreCase("") || quantidadeEmEstoque.getText().equalsIgnoreCase("") || preco.getText().equalsIgnoreCase("")){
-                    JOptionPane.showMessageDialog(null, "Preencha os campos corretamente");
-                }
                 try {
+                    Produto temp = new Produto(nomeProduto.getText(), Integer.parseInt(quantidadeEmEstoque.getText()), Double.parseDouble(preco.getText()));
                     Fachada.getInstancia().novoProduto(temp);
                     JOptionPane.showMessageDialog(null, "Produto adicionado com sucesso");
-                } catch (ProdutoNaoExistente ex) {
+                    setVisible(false);
                 } catch (ProdutoJaExistente ex) {
                     JOptionPane.showMessageDialog(null, "Esse produto já existe");
+                } catch (Exception ex) {
+                    JOptionPane.showMessageDialog(null, "Preencha os campos corretamente");
                 }
             }
         });

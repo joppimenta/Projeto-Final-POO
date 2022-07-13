@@ -46,8 +46,7 @@ public class Fachada {
         return instancia;
     }
 
-
-    public void novoProduto(Produto prod) throws ProdutoJaExistente, ProdutoNaoExistente {
+    public void novoProduto(Produto prod) throws ProdutoJaExistente{
         contProduto.novoProduto(prod);
     }
     public void alteraProduto(Produto prod) throws ProdutoNaoExistente{
