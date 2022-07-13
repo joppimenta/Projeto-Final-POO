@@ -61,7 +61,7 @@ public class ListarLojaCidadeGui extends JFrame {
                             produtos = produtos + produto.getNome() + ": " + produto.getPreco()+ "R$" + System.lineSeparator();
                         }
                     }
-                    textArea.setText(result);
+                    textArea.setText(result + produtos);
 
                 } catch (ListaVazia ex) {
                     JOptionPane.showMessageDialog(null, "Não há lojas cadastradas");
