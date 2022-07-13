@@ -18,6 +18,7 @@ public class ListarLojaBairroGui extends JFrame {
     private JTextArea textArea = new JTextArea();
 
     public ListarLojaBairroGui() {
+        setTitle("Listar Lojas por Bairro");
         JPanel panel1 = new JPanel();
         panel1.setLayout(new GridBagLayout());
         GridBagConstraints gbc = new GridBagConstraints();
@@ -45,7 +46,7 @@ public class ListarLojaBairroGui extends JFrame {
         add(panel2, BorderLayout.CENTER);
 
         setSize(500, 500);
-
+        setLocationRelativeTo(null);
         listarLojaBairroBotao.addActionListener(new ActionListener() {
             @Override
             public void actionPerformed(ActionEvent e) {

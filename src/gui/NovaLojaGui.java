@@ -87,7 +87,7 @@ public class NovaLojaGui extends JFrame {
         c.add(criarLojaBotao, gbc);
 
         setSize(500, 500);
-
+        setLocationRelativeTo(null);
         criarLojaBotao.addActionListener(new ActionListener() {
             @Override
             public void actionPerformed(ActionEvent e) {

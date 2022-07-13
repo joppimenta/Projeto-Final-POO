@@ -15,10 +15,12 @@ public class RemoverProdutoGui extends JFrame {
 
     public RemoverProdutoGui(){
         super();
+        setTitle("Excluir Produto");
         Container c = this.getContentPane();
         GridBagConstraints gbc = new GridBagConstraints();
         c.setLayout(new GridBagLayout());
         setSize(500, 500);
+        setLocationRelativeTo(null);
 
         gbc.gridx = 0;
         gbc.gridy = 0;

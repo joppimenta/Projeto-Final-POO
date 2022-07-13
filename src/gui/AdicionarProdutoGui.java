@@ -63,6 +63,7 @@ public class AdicionarProdutoGui extends JFrame {
         c.add(criarProdutoBotao, gbc);
 
         setSize(500, 500);
+        setLocationRelativeTo(null);
 
 
         criarProdutoBotao.addActionListener(new ActionListener() {

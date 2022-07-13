@@ -14,20 +14,23 @@ import java.awt.event.ActionListener;
 
 public class RemoverProdutoLojaGui extends JFrame {
 
-    private JLabel produtoLabel = new JLabel("Que produto você quer adicionar?");
+    private JLabel produtoLabel = new JLabel("Que produto você quer retirar?");
     private JTextField produtoField = new JTextField();
-    private JLabel lojaLabel = new JLabel("Em que loja voce quer adicionar o produto?");
+    private JLabel lojaLabel = new JLabel("De que loja voce quer remover o produto?");
     private JTextField lojaField = new JTextField();
 
-    private JButton adicionarBotao = new JButton("Adicionar produto");
+    private JButton adicionarBotao = new JButton("Remover produto");
 
     public RemoverProdutoLojaGui(){
         super();
+
+        setTitle("Remover Produto de uma Loja");
         Container c = this.getContentPane();
         GridBagConstraints gbc = new GridBagConstraints();
         c.setLayout(new GridBagLayout());
 
         setSize(500, 500);
+        setLocationRelativeTo(null);
 
         gbc.gridx = 0;
         gbc.gridy = 0;

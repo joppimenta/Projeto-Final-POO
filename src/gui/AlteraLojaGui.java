@@ -30,6 +30,7 @@ public class AlteraLojaGui extends JFrame {
 
     public AlteraLojaGui(){
         super();
+        setTitle("Alterar Loja");
         Container c = this.getContentPane();
         GridBagConstraints gbc = new GridBagConstraints();
         c.setLayout(new GridBagLayout());
@@ -85,6 +86,7 @@ public class AlteraLojaGui extends JFrame {
         c.add(criarLojaBotao, gbc);
 
         setSize(500, 500);
+        setLocationRelativeTo(null);
 
 
         criarLojaBotao.addActionListener(new ActionListener() {

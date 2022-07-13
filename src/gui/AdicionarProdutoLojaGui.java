@@ -28,6 +28,7 @@ public class AdicionarProdutoLojaGui extends JFrame {
         c.setLayout(new GridBagLayout());
 
         setSize(500, 500);
+        setLocationRelativeTo(null);
 
         gbc.gridx = 0;
         gbc.gridy = 0;

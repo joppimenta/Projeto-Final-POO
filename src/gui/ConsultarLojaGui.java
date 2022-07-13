@@ -19,6 +19,7 @@ public class ConsultarLojaGui extends JFrame {
     private JButton consultarButao = new JButton("Consultar Loja");
 
     public ConsultarLojaGui(){
+        setTitle("Consultar Loja");
         JPanel panel1 = new JPanel();
         panel1.setLayout(new GridBagLayout());
         GridBagConstraints gbc = new GridBagConstraints();
@@ -46,7 +47,7 @@ public class ConsultarLojaGui extends JFrame {
         add(panel2, BorderLayout.CENTER);
 
         setSize(500, 500);
-
+        setLocationRelativeTo(null);
         consultarButao.addActionListener(new ActionListener() {
             @Override
             public void actionPerformed(ActionEvent e) {

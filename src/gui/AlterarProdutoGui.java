@@ -24,6 +24,7 @@ public class AlterarProdutoGui extends JFrame {
 
     public AlterarProdutoGui(){
         super();
+        setTitle("Alterar Produto");
         Container c = this.getContentPane();
         GridBagConstraints gbc = new GridBagConstraints();
         c.setLayout(new GridBagLayout());
@@ -62,6 +63,7 @@ public class AlterarProdutoGui extends JFrame {
         c.add(alterarProdutoBotao, gbc);
 
         setSize(500, 500);
+        setLocationRelativeTo(null);
 
         alterarProdutoBotao.addActionListener(new ActionListener() {
             @Override
