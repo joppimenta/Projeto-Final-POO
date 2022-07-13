@@ -24,7 +24,6 @@ public class AdicionarProdutoGui extends JFrame {
 
     private JButton criarProdutoBotao = new JButton("Criar produto");
 
-    private Fachada fachada;
     public AdicionarProdutoGui(){
         super();
         Container c = this.getContentPane();
@@ -76,7 +75,7 @@ public class AdicionarProdutoGui extends JFrame {
                     JOptionPane.showMessageDialog(null, "Preencha os campos corretamente");
                 }
                 try {
-                    fachada.getInstancia().novoProduto(temp);
+                    Fachada.getInstancia().novoProduto(temp);
                     JOptionPane.showMessageDialog(null, "Produto adicionado com sucesso");
                 } catch (ProdutoNaoExistente ex) {
                 } catch (ProdutoJaExistente ex) {

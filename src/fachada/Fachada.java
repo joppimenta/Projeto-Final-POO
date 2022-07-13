@@ -57,7 +57,7 @@ public class Fachada {
     public void alteraLoja(Loja loja) throws LojaNaoExistente{
         contLoja.alteraLoja(loja);
     }
-    public void removeLoja(Loja loja) throws LojaNaoExistente{
+    public void removeLoja(String loja) throws LojaNaoExistente{
         contLoja.removeLoja(loja);
     }
     public void adicionarProduto(Loja loja, Produto prod) throws ProdutoJaExistente, ProdutoNaoExistente {

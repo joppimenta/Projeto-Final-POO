@@ -37,9 +37,9 @@ public class ControladorLoja {
         repositorioLojas.alterarLoja(loja);
     }
 
-    public void removeLoja(Loja loja) throws LojaNaoExistente{
-        consultaLoja(loja.getNome());
-        repositorioLojas.removerLoja(loja);
+    public void removeLoja(String nomeLoja) throws LojaNaoExistente{
+        consultaLoja(nomeLoja);
+        repositorioLojas.removerLoja(nomeLoja);
     }
 
 

@@ -18,8 +18,8 @@ public class RepositorioLojas {
         this.listaLojas.put(loja.getNome(), loja);
     }
 
-    public void removerLoja(Loja loja){
-        this.listaLojas.remove(loja.getNome());
+    public void removerLoja(String nomeLoja){
+        this.listaLojas.remove(nomeLoja);
     }
 
     public Collection<Loja> listaLoja(){

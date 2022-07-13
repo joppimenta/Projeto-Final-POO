@@ -1,5 +1,6 @@
 package gui;
 
+import exceptions.LojaNaoExistente;
 import exceptions.ProdutoNaoExistente;
 import fachada.Fachada;
 
@@ -8,14 +9,14 @@ import java.awt.*;
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
 
-public class RemoverProdutoGui extends JFrame {
-    private JLabel nomeProdutoLabel = new JLabel("Digite o nome do produto você deseja remover: ");
-    private JTextArea nomeProduto = new JTextArea();
+public class RemoveLojaGui extends JFrame {
+    private JLabel nomeLojaLabel = new JLabel("Digite o nome da loja você deseja remover: ");
+    private JTextArea nomeLoja = new JTextArea();
 
-    private JButton removerBotao = new JButton("Remover produto");
+    private JButton removerBotao = new JButton("Remover Loja");
 
 
-    public RemoverProdutoGui(){
+    public RemoveLojaGui(){
         super();
         Container c = this.getContentPane();
         GridBagConstraints gbc = new GridBagConstraints();
@@ -26,13 +27,13 @@ public class RemoverProdutoGui extends JFrame {
         gbc.gridx = 0;
         gbc.gridy = 0;
 
-        c.add(nomeProdutoLabel, gbc);
+        c.add(nomeLojaLabel, gbc);
 
         gbc.gridx = 1;
 
-        nomeProduto.setColumns(200);
+        nomeLoja.setColumns(200);
 
-        c.add(nomeProduto, gbc);
+        c.add(nomeLoja, gbc);
 
         gbc.gridy = 1;
 
@@ -42,9 +43,9 @@ public class RemoverProdutoGui extends JFrame {
             @Override
             public void actionPerformed(ActionEvent e) {
                 try {
-                    Fachada.getInstancia().removeProduto(nomeProduto.getText());
-                } catch (ProdutoNaoExistente ex) {
-                    JOptionPane.showMessageDialog(null, "Esse produto não existe");
+                    Fachada.getInstancia().removeLoja(nomeLoja.getText());
+                } catch (LojaNaoExistente ex) {
+                    JOptionPane.showMessageDialog(null, "Essa loja não existe");
                 }
             }
         });
