@@ -59,7 +59,7 @@ public class ListarLojaBairroGui extends JFrame {
                     }
 
                 } catch (ListaVazia ex) {
-                    throw new RuntimeException(ex);
+                    JOptionPane.showMessageDialog(null, "Não há lojas cadastradas");
                 }
             }
         });

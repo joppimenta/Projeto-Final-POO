@@ -12,7 +12,10 @@ import java.awt.event.ActionListener;
 public class ConsultarProdutoGui extends JFrame {
 
     private JLabel questionLabel = new JLabel("Que produto você deseja consultar?");
-    private JTextArea produto = new JTextArea();
+    private JLabel nomeLabel = new JLabel("Nome do produto: ");
+    private JLabel quantidadeLabel = new JLabel("Quantidade em estoque: ");
+    private JLabel precoLabel = new JLabel("Preço: ");
+    private JTextField produto = new JTextField();
     private JTextArea produtoConsultado = new JTextArea();
     private JButton consultarButao = new JButton("Consultar produto");
 
@@ -29,7 +32,7 @@ public class ConsultarProdutoGui extends JFrame {
 
         gbc.gridx = 1;
 
-        produto.setColumns(7);
+        produto.setColumns(10);
         panel1.add(produto, gbc);
 
         gbc.gridy = 1;

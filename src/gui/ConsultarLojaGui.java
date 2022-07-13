@@ -14,7 +14,7 @@ public class ConsultarLojaGui extends JFrame {
 
     private JLabel questionLabel = new JLabel("Que Loja você deseja consultar?");
 
-    private JTextArea lojaNome = new JTextArea();
+    private JTextField lojaNome = new JTextField();
     private JTextArea lojaConsultada = new JTextArea();
     private JButton consultarButao = new JButton("Consultar Loja");
 
@@ -31,7 +31,7 @@ public class ConsultarLojaGui extends JFrame {
 
         gbc.gridx = 1;
 
-        lojaNome.setColumns(7);
+        lojaNome.setColumns(10);
         panel1.add(lojaNome, gbc);
 
         gbc.gridy = 1;
