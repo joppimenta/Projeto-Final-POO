@@ -49,7 +49,7 @@ public class ListarLojaCidadeGui extends JFrame {
             @Override
             public void actionPerformed(ActionEvent e) {
                 try {
-                    Collection<Loja> listaLojasBairro = Fachada.getInstancia().listaLojaBairro(cidadeField.getText());
+                    Collection<Loja> listaLojasBairro = Fachada.getInstancia().listaLojaCidade(cidadeField.getText());
                     String result = "";
                     for(Loja l : listaLojasBairro){
                         result = result + "Nome da loja: " + l.getNome() + System.lineSeparator() + "Endereço: " + l.getEndereco() +
