@@ -59,8 +59,10 @@ public class RemoverProdutoLojaGui extends JFrame {
             public void actionPerformed(ActionEvent e) {
                 try {
                     Loja lojaTemp = Fachada.getInstancia().consultaLoja(lojaField.getText());
-                    Produto produtoTemp = Fachada.getInstancia().consultaProduto(produtoLabel.getText());
+                    Produto produtoTemp = Fachada.getInstancia().consultaProduto(produtoField.getText());
                     Fachada.getInstancia().removerProduto(lojaTemp, produtoTemp);
+
+                    JOptionPane.showMessageDialog(null, "Produto removido da loja com sucesso");
                 } catch (LojaNaoExistente ex) {
                     JOptionPane.showMessageDialog(null, "Essa loja não existe");
                 } catch (ProdutoNaoExistente ex) {

@@ -54,7 +54,7 @@ public class ConsultarLojaGui extends JFrame {
                 try {
                     Loja temp = Fachada.getInstancia().consultaLoja(lojaNome.getText());
                     String resp = "Nome da loja: " + temp.getNome() + System.lineSeparator() + "Endereço: " + temp.getEndereco()
-                            + System.lineSeparator() + "Bairro: " + temp.getBairro() + System.lineSeparator() + "Cidade: " + temp.getCidade() + System.lineSeparator() + "Estado: " + temp.getEstado() + System.lineSeparator();
+                            + System.lineSeparator() + "Bairro: " + temp.getBairro() + System.lineSeparator() + "Cidade: " + temp.getCidade() + System.lineSeparator() + "Estado: " + temp.getEstado() + System.lineSeparator() + System.lineSeparator();
                     String produtos = "Lista de produtos: " + System.lineSeparator();
                     for (Produto produto : temp.getProdutos()) {
                         produtos = produtos + produto.getNome() + System.lineSeparator();

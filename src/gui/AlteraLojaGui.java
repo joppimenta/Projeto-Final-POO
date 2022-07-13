@@ -11,7 +11,7 @@ import java.awt.event.ActionListener;
 
 public class AlteraLojaGui extends JFrame {
 
-    private JLabel nomeLabel = new JLabel("Nome da Loja: ");
+    private JLabel nomeLabel = new JLabel("Qual Loja deseja alterar?: ");
     private JTextField nomeLoja = new JTextField();
 
     private JLabel enderecoLabel = new JLabel("Endereco: ");
