@@ -14,26 +14,38 @@ import exceptions.ProdutoJaExistente;
 import exceptions.ProdutoNaoExistente;
 import data.Loja;
 
+/** Fachada do Projeto. Singleton
+ * @see controllers para documentação dos métodos
+ * @version 1.0
+ * @since 1.0
+ */
 public class Fachada {
     private ControladorLoja contLoja;
     private ControladorProduto contProduto;
 
     private static Fachada instancia = null;
     
+    /** Construtor da fachada, metódo privado para a implementação do singleton
+     * 
+     */
     private Fachada() {
         RepositorioProdutos repProdutos = new RepositorioProdutos();
         RepositorioLojas repLojas = new RepositorioLojas();
 
         contProduto = new ControladorProduto(repProdutos);
-        contLoja = new ControladorLoja(repLojas, contProduto);
+        contLoja = new ControladorLoja(repLojas);
     }
 
+    /** Implementa o singleton, se uma fachada não existir uma é criada, se já, o método retorna a fachada
+     * @return
+     */
     public static Fachada getInstancia(){
         if(instancia == null){
             instancia = new Fachada();
         }
         return instancia;
     }
+
 
     public void novoProduto(Produto prod) throws ProdutoJaExistente, ProdutoNaoExistente {
         contProduto.novoProduto(prod);
@@ -60,8 +72,14 @@ public class Fachada {
     public void removeLoja(String loja) throws LojaNaoExistente{
         contLoja.removeLoja(loja);
     }
+    /** Adiciona um novo produto a uma loja
+     * @param loja
+     * @param prod
+     * @throws ProdutoJaExistente
+     * @throws ProdutoNaoExistente
+     */
     public void adicionarProduto(Loja loja, Produto prod) throws ProdutoJaExistente, ProdutoNaoExistente {
-        contLoja.adicionarProduto(loja, prod);
+        contLoja.adicionarProduto(loja, prod, this.contProduto.getRepositorioProdutos());
     }
     public void removerProduto(Loja loja, Produto prod) throws ListaVazia{
         contLoja.removerProduto(loja, prod);

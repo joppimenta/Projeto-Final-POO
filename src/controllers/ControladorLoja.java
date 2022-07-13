@@ -9,16 +9,26 @@ import data.Loja;
 import data.Produto;
 import exceptions.*;
 
+/** Controlador do repositório de lojas
+ * @version 1.0
+ * @since 1.0
+ */
 public class ControladorLoja {
     
     private RepositorioLojas repositorioLojas;
-    private ControladorProduto controladorProduto;
 
-    public ControladorLoja(RepositorioLojas repositorioLojas, ControladorProduto controladorProduto) {
+    /** Construtor do controlador de lojas
+     * @param repositorioLojas
+     */
+    public ControladorLoja(RepositorioLojas repositorioLojas) {
         this.repositorioLojas = repositorioLojas;
-        this.controladorProduto = controladorProduto;
     }
 
+    /** Registra uma nova loja
+     * @param loja
+     * @throws LojaJaExistente
+     * @throws LojaNaoExistente
+     */
     public void novaLoja(Loja loja) throws LojaJaExistente, LojaNaoExistente{
         Loja loj = null;
         try {
@@ -32,32 +42,51 @@ public class ControladorLoja {
         }
     }
 
+    /** Altera os dados de uma loja já existente
+     * @param loja
+     * @throws LojaNaoExistente
+     */
     public void alteraLoja(Loja loja) throws LojaNaoExistente{
         consultaLoja(loja.getNome());
         repositorioLojas.alterarLoja(loja);
     }
 
+    /** Remove uma loja do repositório
+     * @param nomeLoja
+     * @throws LojaNaoExistente
+     */
     public void removeLoja(String nomeLoja) throws LojaNaoExistente{
         consultaLoja(nomeLoja);
         repositorioLojas.removerLoja(nomeLoja);
     }
 
-
-    public void adicionarProduto(Loja loja, Produto prod) throws ProdutoJaExistente, ProdutoNaoExistente {
+    /** Adiciona um produto em uma loja específica. Sempre verifica se o produto que está sendo adicionado existe no repositório de produtos
+     * @param loja
+     * @param prod
+     * @param rep
+     * @throws ProdutoJaExistente
+     * @throws ProdutoNaoExistente
+     */
+    public void adicionarProduto(Loja loja, Produto prod, RepositorioProdutos rep) throws ProdutoJaExistente, ProdutoNaoExistente {
         ArrayList<Produto> lista = loja.getProdutos();
         for (Produto produto : lista) {
             if (produto.getNome().equalsIgnoreCase(prod.getNome())) {
                 throw new ProdutoJaExistente();
             }
         }
-        if(controladorProduto.consultaProduto(prod.getNome()) == null){
+        if(rep.consultaProduto(prod.getNome()) == null){
             throw new ProdutoNaoExistente();
         }
         lista.add(prod);
         loja.setProdutos(lista);
     }
 
-    public void removerProduto(Loja loja, Produto prod) throws ListaVazia{
+   /** Remove um produto de uma loja
+     * @param loja
+     * @param prod
+     * @throws ListaVazia
+     */
+     public void removerProduto(Loja loja, Produto prod) throws ListaVazia{
         ArrayList<Produto> lista = loja.getProdutos();
         if (lista == null || lista.size()== 0) {
             throw new ListaVazia();
@@ -66,6 +95,11 @@ public class ControladorLoja {
         loja.setProdutos(lista);
     }
 
+    /** Lista todas as lojas de um bairro específico
+     * @param bairro
+     * @return
+     * @throws ListaVazia
+     */
     public Collection<Loja> listaLojaBairro(String bairro) throws ListaVazia{
         Collection<Loja> lista = repositorioLojas.listaLoja();
         if (lista == null || lista.size() == 0) {
@@ -79,6 +113,11 @@ public class ControladorLoja {
         return lista;
     }
 
+    /** Lista todas as lojas de uma cidade específica
+     * @param cidade
+     * @return
+     * @throws ListaVazia
+     */
     public Collection<Loja> listaLojaCidade(String cidade) throws ListaVazia{
         Collection<Loja> lista = repositorioLojas.listaLoja();
         if (lista == null || lista.size() == 0) {
@@ -92,6 +131,11 @@ public class ControladorLoja {
         return lista;
     }
 
+    /** consulta por lojas com base no nome
+     * @param loja
+     * @return
+     * @throws LojaNaoExistente
+     */
     public Loja consultaLoja(String loja) throws LojaNaoExistente{
         if (repositorioLojas.consultaLoja(loja) == null) {
             throw new LojaNaoExistente();
