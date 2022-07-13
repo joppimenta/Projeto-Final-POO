@@ -21,7 +21,6 @@ public class RemoveLojaGui extends JFrame {
         Container c = this.getContentPane();
         GridBagConstraints gbc = new GridBagConstraints();
         c.setLayout(new GridBagLayout());
-        setDefaultCloseOperation(EXIT_ON_CLOSE);
         setSize(500, 500);
 
         gbc.gridx = 0;
@@ -51,7 +50,4 @@ public class RemoveLojaGui extends JFrame {
         });
     }
 
-    public static void main(String[] args) {
-        new RemoverProdutoGui().setVisible(true);
-    }
 }

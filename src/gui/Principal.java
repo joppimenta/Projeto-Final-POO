@@ -4,6 +4,8 @@ import fachada.Fachada;
 
 import javax.swing.*;
 import java.awt.*;
+import java.awt.event.ActionEvent;
+import java.awt.event.ActionListener;
 
 public class Principal extends JFrame {
 
@@ -23,8 +25,15 @@ public class Principal extends JFrame {
     private JButton listarLojaCidade = new JButton("Listar Loja por Cidade");
 
     private AdicionarProdutoGui adicionarProdutoGui;
+    private RemoverProdutoGui removerProdutoGui;
+    private AlterarProdutoGui alterarProdutoGui;
+    private ConsultarProdutoGui consultarProdutoGui;
+    private NovaLojaGui novaLojaGui;
+    private RemoveLojaGui removeLojaGui;
+    private AlteraLojaGui alteraLojaGui;
+    private AdicionarProdutoLojaGui adicionarProdutoLojaGui;
+    private RemoverProdutoLojaGui removerProdutoLojaGui;
 
-    private Fachada fachada;
 
     public Principal(){
         super();
@@ -82,6 +91,80 @@ public class Principal extends JFrame {
 
 
         setVisible(true);
+
+        adicionarProdutoGui = new AdicionarProdutoGui();
+        removerProdutoGui = new RemoverProdutoGui();
+        alteraLojaGui = new AlteraLojaGui();
+        removeLojaGui = new RemoveLojaGui();
+        adicionarProdutoGui = new AdicionarProdutoGui();
+        consultarProdutoGui = new ConsultarProdutoGui();
+        alterarProdutoGui = new AlterarProdutoGui();
+        novaLojaGui = new NovaLojaGui();
+        adicionarProdutoLojaGui = new AdicionarProdutoLojaGui();
+        removerProdutoLojaGui = new RemoverProdutoLojaGui();
+
+        criarProduto.addActionListener(new ActionListener() {
+            @Override
+            public void actionPerformed(ActionEvent e) {
+                adicionarProdutoGui.setVisible(true);
+            }
+        });
+
+        removerProduto.addActionListener(new ActionListener() {
+            @Override
+            public void actionPerformed(ActionEvent e) {
+                removerProdutoGui.setVisible(true);
+            }
+        });
+
+        alterarProduto.addActionListener(new ActionListener() {
+            @Override
+            public void actionPerformed(ActionEvent e) {
+                alterarProdutoGui.setVisible(true);
+            }
+        });
+
+        consultarProduto.addActionListener(new ActionListener() {
+            @Override
+            public void actionPerformed(ActionEvent e) {
+                consultarProdutoGui.setVisible(true);
+            }
+        });
+
+        criarLoja.addActionListener(new ActionListener() {
+            @Override
+            public void actionPerformed(ActionEvent e) {
+                novaLojaGui.setVisible(true);
+            }
+        });
+
+        removerLoja.addActionListener(new ActionListener() {
+            @Override
+            public void actionPerformed(ActionEvent e) {
+                removeLojaGui.setVisible(true);
+            }
+        });
+
+        alterarLoja.addActionListener(new ActionListener() {
+            @Override
+            public void actionPerformed(ActionEvent e) {
+                alteraLojaGui.setVisible(true);
+            }
+        });
+
+        adicionarProdutoLoja.addActionListener(new ActionListener() {
+            @Override
+            public void actionPerformed(ActionEvent e) {
+                adicionarProdutoLojaGui.setVisible(true);
+            }
+        });
+
+        removerProdutoLoja.addActionListener(new ActionListener() {
+            @Override
+            public void actionPerformed(ActionEvent e) {
+                removerProdutoLojaGui.setVisible(true);
+            }
+        });
     }
 
 

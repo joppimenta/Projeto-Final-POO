@@ -20,7 +20,6 @@ public class ConsultarProdutoGui extends JFrame {
         JPanel panel1 = new JPanel();
         panel1.setLayout(new GridBagLayout());
         GridBagConstraints gbc = new GridBagConstraints();
-        setDefaultCloseOperation(EXIT_ON_CLOSE);
 
 
         gbc.gridx = 0;
@@ -51,8 +50,8 @@ public class ConsultarProdutoGui extends JFrame {
             public void actionPerformed(ActionEvent e) {
                 try {
                     Produto temp = Fachada.getInstancia().consultaProduto(produto.getText());
-                    String resp = "Nome do produto: " + temp.getNome() + "\n" + "Quantidade em estoque: " + temp.getQuantidadeEmEstoque()
-                            + "\n" + "Preco: " + temp.getPreco();
+                    String resp = "Nome do produto: " + temp.getNome() + System.lineSeparator() + "Quantidade em estoque: " + temp.getQuantidadeEmEstoque()
+                            + System.lineSeparator() + "Preco: " + temp.getPreco();
                     produtoConsultado.setText(resp);
                 } catch (ProdutoNaoExistente ex) {
                     JOptionPane.showMessageDialog(null, "Produto especificado não existe");
@@ -62,7 +61,4 @@ public class ConsultarProdutoGui extends JFrame {
 
     }
 
-    public static void main(String[] args) {
-        new ConsultarProdutoGui().setVisible(true);
-    }
 }

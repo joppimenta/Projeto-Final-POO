@@ -21,12 +21,11 @@ public class AdicionarProdutoLojaGui extends JFrame {
 
     private JButton adicionarBotao = new JButton("Adicionar produto");
 
-    public AdicionarProdutoLojaGui(){
+    public AdicionarProdutoLojaGui() {
         super();
         Container c = this.getContentPane();
         GridBagConstraints gbc = new GridBagConstraints();
         c.setLayout(new GridBagLayout());
-        setDefaultCloseOperation(EXIT_ON_CLOSE);
 
         setSize(500, 500);
 
@@ -68,9 +67,5 @@ public class AdicionarProdutoLojaGui extends JFrame {
                 }
             }
         });
-    }
-
-    public static void main(String[] args) {
-        new AdicionarProdutoLojaGui().setVisible(true);
     }
 }

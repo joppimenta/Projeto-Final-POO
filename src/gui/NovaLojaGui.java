@@ -34,7 +34,6 @@ public class NovaLojaGui extends JFrame {
         Container c = this.getContentPane();
         GridBagConstraints gbc = new GridBagConstraints();
         c.setLayout(new GridBagLayout());
-        setDefaultCloseOperation(EXIT_ON_CLOSE);
 
 
         gbc.gridx = 0;
@@ -88,7 +87,6 @@ public class NovaLojaGui extends JFrame {
         c.add(criarLojaBotao, gbc);
 
         setSize(500, 500);
-        setVisible(true);
 
         criarLojaBotao.addActionListener(new ActionListener() {
             @Override
@@ -110,7 +108,4 @@ public class NovaLojaGui extends JFrame {
     }
 
 
-    public static void main(String[] args) {
-        new NovaLojaGui().setVisible(true);
-    }
 }
