@@ -1,6 +1,7 @@
 package gui;
 
 import data.Loja;
+import data.Produto;
 import exceptions.ListaVazia;
 import fachada.Fachada;
 
@@ -51,12 +52,16 @@ public class ListarLojaBairroGui extends JFrame {
                 try {
                     Collection<Loja> listaLojasBairro = Fachada.getInstancia().listaLojaBairro(bairroField.getText());
                     String result = "";
+                    String produtos = "Lista de produtos: " + System.lineSeparator();
                     for(Loja l : listaLojasBairro){
                         result = result + "Nome da loja: " + l.getNome() + System.lineSeparator() + "Endereço: " + l.getEndereco() +
                                 System.lineSeparator() + "Bairro: " + l.getBairro() + System.lineSeparator() + "Cidade: " + l.getCidade() +
                                 System.lineSeparator() + "Estado: " + l.getEstado() + System.lineSeparator() + System.lineSeparator();
-                        textArea.setText(result);
+                        for (Produto produto : l.getProdutos()) {
+                            produtos = produtos + produto.getNome() + ": " + produto.getPreco()+ "R$" + System.lineSeparator();
+                        }
                     }
+                    textArea.setText(result + produtos);
 
                 } catch (ListaVazia ex) {
                     JOptionPane.showMessageDialog(null, "Não há lojas cadastradas");
