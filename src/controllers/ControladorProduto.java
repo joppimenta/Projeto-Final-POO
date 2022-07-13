@@ -34,7 +34,7 @@ public class ControladorProduto {
      * @throws ProdutoJaExistente
      * @throws ProdutoNaoExistente
      */
-    public void novoProduto(Produto prod) throws ProdutoJaExistente, ProdutoNaoExistente{
+    public void novoProduto(Produto prod) throws ProdutoJaExistente{
         if (repositorioProdutos.consultaProduto(prod.getNome()) == null){
             repositorioProdutos.novoProduto(prod);
         }
