@@ -10,7 +10,7 @@ import java.awt.event.ActionListener;
 
 public class RemoverProdutoGui extends JFrame {
     private JLabel nomeProdutoLabel = new JLabel("Digite o nome do produto você deseja remover: ");
-    private JTextArea nomeProduto = new JTextArea();
+    private JTextField nomeProduto = new JTextField();
     private JButton removerBotao = new JButton("Remover produto");
 
     public RemoverProdutoGui(){
@@ -27,11 +27,12 @@ public class RemoverProdutoGui extends JFrame {
 
         gbc.gridx = 1;
 
-        nomeProduto.setColumns(200);
+        nomeProduto.setColumns(10);
 
         c.add(nomeProduto, gbc);
 
         gbc.gridy = 1;
+        gbc.gridx = 0;
 
         c.add(removerBotao, gbc);
 
@@ -41,6 +42,7 @@ public class RemoverProdutoGui extends JFrame {
                 try {
                     Fachada.getInstancia().removeProduto(nomeProduto.getText());
                     JOptionPane.showMessageDialog(null, "Produto removido com sucesso");
+                    setVisible(false);
                 } catch (ProdutoNaoExistente ex) {
                     JOptionPane.showMessageDialog(null, "Esse produto não existe");
                 }

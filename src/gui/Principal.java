@@ -1,7 +1,5 @@
 package gui;
 
-import fachada.Fachada;
-
 import javax.swing.*;
 import java.awt.*;
 import java.awt.event.ActionEvent;
@@ -29,7 +27,7 @@ public class Principal extends JFrame {
     private AlterarProdutoGui alterarProdutoGui;
     private ConsultarProdutoGui consultarProdutoGui;
     private NovaLojaGui novaLojaGui;
-    private RemoveLojaGui removeLojaGui;
+    private RemoverLojaGui removerLojaGui;
     private AlteraLojaGui alteraLojaGui;
     private AdicionarProdutoLojaGui adicionarProdutoLojaGui;
     private RemoverProdutoLojaGui removerProdutoLojaGui;
@@ -97,7 +95,7 @@ public class Principal extends JFrame {
         adicionarProdutoGui = new AdicionarProdutoGui();
         removerProdutoGui = new RemoverProdutoGui();
         alteraLojaGui = new AlteraLojaGui();
-        removeLojaGui = new RemoveLojaGui();
+        removerLojaGui = new RemoverLojaGui();
         adicionarProdutoGui = new AdicionarProdutoGui();
         consultarProdutoGui = new ConsultarProdutoGui();
         alterarProdutoGui = new AlterarProdutoGui();
@@ -145,7 +143,7 @@ public class Principal extends JFrame {
         removerLoja.addActionListener(new ActionListener() {
             @Override
             public void actionPerformed(ActionEvent e) {
-                removeLojaGui.setVisible(true);
+                removerLojaGui.setVisible(true);
             }
         });
 

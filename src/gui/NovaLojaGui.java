@@ -31,6 +31,7 @@ public class NovaLojaGui extends JFrame {
 
     public NovaLojaGui(){
         super();
+        setTitle("Nova Loja");
         Container c = this.getContentPane();
         GridBagConstraints gbc = new GridBagConstraints();
         c.setLayout(new GridBagLayout());
@@ -97,10 +98,11 @@ public class NovaLojaGui extends JFrame {
                     cidade.getText().equalsIgnoreCase("") || estado.getText().equalsIgnoreCase("")){
                         JOptionPane.showMessageDialog(null, "Preencha os campos corretamente");
                     }
-                    Fachada.getInstancia().novaLoja(temp);
-                    JOptionPane.showMessageDialog(null, "Loja adicionada com sucesso");
-                    setVisible(false);
-                } catch (LojaNaoExistente ex) {
+                    else{
+                        Fachada.getInstancia().novaLoja(temp);
+                        JOptionPane.showMessageDialog(null, "Loja adicionada com sucesso");
+                        setVisible(false);
+                    }
                 } catch (LojaJaExistente ex) {
                     JOptionPane.showMessageDialog(null, "Essa loja já existe");
                 }

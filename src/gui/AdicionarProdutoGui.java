@@ -26,6 +26,7 @@ public class AdicionarProdutoGui extends JFrame {
 
     public AdicionarProdutoGui(){
         super();
+        setTitle("Adicionar Produto");
         Container c = this.getContentPane();
         GridBagConstraints gbc = new GridBagConstraints();
         c.setLayout(new GridBagLayout());
@@ -70,14 +71,24 @@ public class AdicionarProdutoGui extends JFrame {
             @Override
             public void actionPerformed(ActionEvent e) {
                 try {
-                    Produto temp = new Produto(nomeProduto.getText(), Integer.parseInt(quantidadeEmEstoque.getText()), Double.parseDouble(preco.getText()));
-                    Fachada.getInstancia().novoProduto(temp);
-                    JOptionPane.showMessageDialog(null, "Produto adicionado com sucesso");
-                    setVisible(false);
+                    int quantidade = Integer.parseInt(quantidadeEmEstoque.getText());
+                    double valor = Double.parseDouble(preco.getText());
+                    if(quantidade <= 0 || valor <= 0){
+                        throw new NumberFormatException();
+                    }
+                    Produto temp = new Produto(nomeProduto.getText(), quantidade, valor);
+                    if(nomeProduto.getText().equalsIgnoreCase("")){
+                        JOptionPane.showMessageDialog(null, "Identifique o produto");
+                    }
+                    else {
+                        Fachada.getInstancia().novoProduto(temp);
+                        JOptionPane.showMessageDialog(null, "Produto adicionado com sucesso");
+                        setVisible(false);
+                    }
                 } catch (ProdutoJaExistente ex) {
                     JOptionPane.showMessageDialog(null, "Esse produto já existe");
-                } catch (Exception ex) {
-                    JOptionPane.showMessageDialog(null, "Preencha os campos corretamente");
+                } catch (NumberFormatException ex) {
+                    JOptionPane.showMessageDialog(null, "Insira números válidos");
                 }
             }
         });

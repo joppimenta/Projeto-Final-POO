@@ -29,15 +29,11 @@ public class ControladorLoja {
      * @throws LojaJaExistente
      * @throws LojaNaoExistente
      */
-    public void novaLoja(Loja loja) throws LojaJaExistente, LojaNaoExistente{
-        Loja loj = null;
-        try {
-            loj = consultaLoja(loja.getNome());
-        } catch (LojaNaoExistente e) {
-        }
-        if (loj == null) {
+    public void novaLoja(Loja loja) throws LojaJaExistente{
+        if (repositorioLojas.consultaLoja(loja.getNome()) == null){
             repositorioLojas.novaLoja(loja);
-        } else {
+        }
+        else{
             throw new LojaJaExistente();
         }
     }

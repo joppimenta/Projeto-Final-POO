@@ -1,7 +1,6 @@
 package gui;
 
 import exceptions.LojaNaoExistente;
-import exceptions.ProdutoNaoExistente;
 import fachada.Fachada;
 
 import javax.swing.*;
@@ -9,14 +8,13 @@ import java.awt.*;
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
 
-public class RemoveLojaGui extends JFrame {
+public class RemoverLojaGui extends JFrame {
     private JLabel nomeLojaLabel = new JLabel("Digite o nome da loja você deseja remover: ");
-    private JTextArea nomeLoja = new JTextArea();
-
+    private JTextField nomeLoja = new JTextField();
     private JButton removerBotao = new JButton("Remover Loja");
 
 
-    public RemoveLojaGui(){
+    public RemoverLojaGui(){
         super();
         Container c = this.getContentPane();
         GridBagConstraints gbc = new GridBagConstraints();
@@ -30,10 +28,11 @@ public class RemoveLojaGui extends JFrame {
 
         gbc.gridx = 1;
 
-        nomeLoja.setColumns(200);
+        nomeLoja.setColumns(10);
 
         c.add(nomeLoja, gbc);
 
+        gbc.gridx = 0;
         gbc.gridy = 1;
 
         c.add(removerBotao, gbc);
@@ -44,6 +43,7 @@ public class RemoveLojaGui extends JFrame {
                 try {
                     Fachada.getInstancia().removeLoja(nomeLoja.getText());
                     JOptionPane.showMessageDialog(null, "Loja removida com sucesso");
+                    setVisible(false);
                 } catch (LojaNaoExistente ex) {
                     JOptionPane.showMessageDialog(null, "Essa loja não existe");
                 }

@@ -62,7 +62,7 @@ public class Fachada {
         return contProduto.listaProduto();
     }
 
-    public void novaLoja(Loja loja) throws LojaJaExistente, LojaNaoExistente{
+    public void novaLoja(Loja loja) throws LojaJaExistente{
         contLoja.novaLoja(loja);
     }
     public void alteraLoja(Loja loja) throws LojaNaoExistente{

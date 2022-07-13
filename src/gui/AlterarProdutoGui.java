@@ -68,15 +68,26 @@ public class AlterarProdutoGui extends JFrame {
         alterarProdutoBotao.addActionListener(new ActionListener() {
             @Override
             public void actionPerformed(ActionEvent e) {
-                Produto temp = new Produto(nomeProduto.getText(), Integer.parseInt(quantidadeEmEstoque.getText()), Double.parseDouble(preco.getText()));
-                if(nomeProduto.getText().equalsIgnoreCase("") || quantidadeEmEstoque.getText().equalsIgnoreCase("") || preco.getText().equalsIgnoreCase("")){
-                    JOptionPane.showMessageDialog(null, "Preencha os campos corretamente");
-                }
                 try {
-                    Fachada.getInstancia().alteraProduto(temp);
-                    JOptionPane.showMessageDialog(null, "Produto adicionado com sucesso");
+                    int quantidade = Integer.parseInt(quantidadeEmEstoque.getText());
+                    double valor = Double.parseDouble(preco.getText());
+                    if(quantidade <= 0 || valor <= 0){
+                        throw new NumberFormatException();
+                    }
+                    Produto temp = new Produto(nomeProduto.getText(), quantidade, valor);
+                    if(nomeProduto.getText().equalsIgnoreCase("")){
+                        JOptionPane.showMessageDialog(null, "Identifique o produto");
+                    }
+                    else{
+                        Fachada.getInstancia().alteraProduto(temp);
+                        JOptionPane.showMessageDialog(null, "Produto alterado com êxito");
+                        setVisible(false);
+                    }
+
                 } catch (ProdutoNaoExistente ex) {
                     JOptionPane.showMessageDialog(null, "Esse produto não existe");
+                } catch (NumberFormatException ex) {
+                    JOptionPane.showMessageDialog(null, "Insira números válidos");
                 }
             }
         });
