@@ -54,7 +54,7 @@ public class ListarLojaCidadeGui extends JFrame {
                     for(Loja l : listaLojasBairro){
                         result = result + "Nome da loja: " + l.getNome() + System.lineSeparator() + "Endereço: " + l.getEndereco() +
                                 System.lineSeparator() + "Bairro: " + l.getBairro() + System.lineSeparator() + "Cidade: " + l.getCidade() +
-                                System.lineSeparator() + "Estado: " + l.getEstado() + System.lineSeparator();
+                                System.lineSeparator() + "Estado: " + l.getEstado() + System.lineSeparator() + System.lineSeparator();
                         textArea.setText(result);
                     }
 
