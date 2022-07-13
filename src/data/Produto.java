@@ -1,12 +1,10 @@
-package dados;
+package data;
 
 public class Produto {
 
     private String nome;
     private int quantidadeEmEstoque;
     private double preco;
-
-    private String id;
 
     public Produto(String nome, int quantidadeEmEstoque, double preco) {
         this.nome = nome;
@@ -36,9 +34,5 @@ public class Produto {
 
     public void setPreco(double preco) {
         this.preco = preco;
-    }
-
-    public String getId(){
-        return id;
     }
 }

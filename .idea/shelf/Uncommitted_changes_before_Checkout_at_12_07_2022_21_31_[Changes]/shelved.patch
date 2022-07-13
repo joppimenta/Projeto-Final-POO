@@ -1,0 +1,137 @@
+Index: .idea/workspace.xml
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.BaseRevisionTextPatchEP
+<+><?xml version=\"1.0\" encoding=\"UTF-8\"?>\n<project version=\"4\">\n  <component name=\"ChangeListManager\">\n    <list default=\"true\" id=\"45fe8ebb-cdfb-4fb4-ab9b-64cc193a1b92\" name=\"Changes\" comment=\"\">\n      <change beforePath=\"$PROJECT_DIR$/.idea/workspace.xml\" beforeDir=\"false\" afterPath=\"$PROJECT_DIR$/.idea/workspace.xml\" afterDir=\"false\" />\n      <change beforePath=\"$PROJECT_DIR$/src/dados/Loja.java\" beforeDir=\"false\" afterPath=\"$PROJECT_DIR$/src/dados/Loja.java\" afterDir=\"false\" />\n      <change beforePath=\"$PROJECT_DIR$/src/fachada/Fachada.java\" beforeDir=\"false\" afterPath=\"$PROJECT_DIR$/src/fachada/Fachada.java\" afterDir=\"false\" />\n      <change beforePath=\"$PROJECT_DIR$/src/negocios/ControladorLoja.java\" beforeDir=\"false\" afterPath=\"$PROJECT_DIR$/src/negocios/ControladorLoja.java\" afterDir=\"false\" />\n    </list>\n    <option name=\"SHOW_DIALOG\" value=\"false\" />\n    <option name=\"HIGHLIGHT_CONFLICTS\" value=\"true\" />\n    <option name=\"HIGHLIGHT_NON_ACTIVE_CHANGELIST\" value=\"false\" />\n    <option name=\"LAST_RESOLUTION\" value=\"IGNORE\" />\n  </component>\n  <component name=\"CodeStyleSettingsInfer\">\n    <option name=\"done\" value=\"true\" />\n  </component>\n  <component name=\"FileTemplateManagerImpl\">\n    <option name=\"RECENT_TEMPLATES\">\n      <list>\n        <option value=\"Class\" />\n      </list>\n    </option>\n  </component>\n  <component name=\"Git.Settings\">\n    <option name=\"RECENT_GIT_ROOT_PATH\" value=\"$PROJECT_DIR$\" />\n  </component>\n  <component name=\"MarkdownSettingsMigration\">\n    <option name=\"stateVersion\" value=\"1\" />\n  </component>\n  <component name=\"ProjectCodeStyleSettingsMigration\">\n    <option name=\"version\" value=\"2\" />\n  </component>\n  <component name=\"ProjectId\" id=\"2AP2rl00mr83JakP3yrl0D0mvYf\" />\n  <component name=\"ProjectLevelVcsManager\" settingsEditedManually=\"true\" />\n  <component name=\"ProjectViewState\">\n    <option name=\"hideEmptyMiddlePackages\" value=\"true\" />\n    <option name=\"showLibraryContents\" value=\"true\" />\n  </component>\n  <component name=\"PropertiesComponent\">{\n  &quot;keyToString&quot;: {\n    &quot;RunOnceActivity.OpenProjectViewOnStart&quot;: &quot;true&quot;,\n    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,\n    &quot;last_opened_file_path&quot;: &quot;/home/jppimenta/IdeaProjects/ProjetoFinal-Poo&quot;,\n    &quot;project.structure.last.edited&quot;: &quot;Modules&quot;,\n    &quot;project.structure.proportion&quot;: &quot;0.0&quot;,\n    &quot;project.structure.side.proportion&quot;: &quot;0.2&quot;\n  }\n}</component>\n  <component name=\"RunManager\" selected=\"Application.Sistema\">\n    <configuration name=\"Sistema\" type=\"Application\" factoryName=\"Application\" temporary=\"true\" nameIsGenerated=\"true\">\n      <option name=\"MAIN_CLASS_NAME\" value=\"Sistema\" />\n      <module name=\"ProjetoFinal-Poo\" />\n      <method v=\"2\">\n        <option name=\"Make\" enabled=\"true\" />\n      </method>\n    </configuration>\n    <configuration name=\"dados.Loja\" type=\"Application\" factoryName=\"Application\" temporary=\"true\" nameIsGenerated=\"true\">\n      <option name=\"MAIN_CLASS_NAME\" value=\"dados.Loja\" />\n      <module name=\"ProjetoFinal-Poo\" />\n      <method v=\"2\">\n        <option name=\"Make\" enabled=\"true\" />\n      </method>\n    </configuration>\n    <recent_temporary>\n      <list>\n        <item itemvalue=\"Application.Sistema\" />\n        <item itemvalue=\"Application.dados.Loja\" />\n      </list>\n    </recent_temporary>\n  </component>\n  <component name=\"SpellCheckerSettings\" RuntimeDictionaries=\"0\" Folders=\"0\" CustomDictionaries=\"0\" DefaultDictionary=\"application-level\" UseSingleDictionary=\"true\" transferred=\"true\" />\n  <component name=\"TaskManager\">\n    <task active=\"true\" id=\"Default\" summary=\"Default task\">\n      <changelist id=\"45fe8ebb-cdfb-4fb4-ab9b-64cc193a1b92\" name=\"Changes\" comment=\"\" />\n      <created>1654897111995</created>\n      <option name=\"number\" value=\"Default\" />\n      <option name=\"presentableId\" value=\"Default\" />\n      <updated>1654897111995</updated>\n    </task>\n    <servers />\n  </component>\n  <component name=\"Vcs.Log.Tabs.Properties\">\n    <option name=\"TAB_STATES\">\n      <map>\n        <entry key=\"MAIN\">\n          <value>\n            <State />\n          </value>\n        </entry>\n      </map>\n    </option>\n  </component>\n</project>
+Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
+<+>UTF-8
+===================================================================
+diff --git a/.idea/workspace.xml b/.idea/workspace.xml
+--- a/.idea/workspace.xml	(revision 50c0c147b976352a52ef3d3aca178d0f0c6c947d)
++++ b/.idea/workspace.xml	(date 1657672226523)
+@@ -2,10 +2,17 @@
+ <project version="4">
+   <component name="ChangeListManager">
+     <list default="true" id="45fe8ebb-cdfb-4fb4-ab9b-64cc193a1b92" name="Changes" comment="">
++      <change afterPath="$PROJECT_DIR$/.idea/uiDesigner.xml" afterDir="false" />
++      <change afterPath="$PROJECT_DIR$/src/gui/AdicionarProdutoLojaGui.java" afterDir="false" />
++      <change afterPath="$PROJECT_DIR$/src/gui/AlteraLojaGui.java" afterDir="false" />
++      <change afterPath="$PROJECT_DIR$/src/gui/NovaLojaGui.java" afterDir="false" />
++      <change afterPath="$PROJECT_DIR$/src/gui/RemoveLojaGui.java" afterDir="false" />
++      <change afterPath="$PROJECT_DIR$/src/gui/RemoverProdutoLojaGui.java" afterDir="false" />
+       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+-      <change beforePath="$PROJECT_DIR$/src/dados/Loja.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/dados/Loja.java" afterDir="false" />
++      <change beforePath="$PROJECT_DIR$/src/Repositorios/RepositorioLojas.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Repositorios/RepositorioLojas.java" afterDir="false" />
++      <change beforePath="$PROJECT_DIR$/src/controllers/ControladorLoja.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/controllers/ControladorLoja.java" afterDir="false" />
+       <change beforePath="$PROJECT_DIR$/src/fachada/Fachada.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/fachada/Fachada.java" afterDir="false" />
+-      <change beforePath="$PROJECT_DIR$/src/negocios/ControladorLoja.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/negocios/ControladorLoja.java" afterDir="false" />
++      <change beforePath="$PROJECT_DIR$/src/gui/ConsultarProduto.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/gui/ConsultarProdutoGui.java" afterDir="false" />
+     </list>
+     <option name="SHOW_DIALOG" value="false" />
+     <option name="HIGHLIGHT_CONFLICTS" value="true" />
+@@ -37,35 +44,90 @@
+     <option name="hideEmptyMiddlePackages" value="true" />
+     <option name="showLibraryContents" value="true" />
+   </component>
+-  <component name="PropertiesComponent">{
+-  &quot;keyToString&quot;: {
+-    &quot;RunOnceActivity.OpenProjectViewOnStart&quot;: &quot;true&quot;,
+-    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
+-    &quot;last_opened_file_path&quot;: &quot;/home/jppimenta/IdeaProjects/ProjetoFinal-Poo&quot;,
+-    &quot;project.structure.last.edited&quot;: &quot;Modules&quot;,
+-    &quot;project.structure.proportion&quot;: &quot;0.0&quot;,
+-    &quot;project.structure.side.proportion&quot;: &quot;0.2&quot;
++  <component name="PropertiesComponent"><![CDATA[{
++  "keyToString": {
++    "RunOnceActivity.OpenProjectViewOnStart": "true",
++    "RunOnceActivity.ShowReadmeOnStart": "true",
++    "SHARE_PROJECT_CONFIGURATION_FILES": "true",
++    "last_opened_file_path": "/home/jppimenta/Downloads/Projeto-Final-POO-refactoring",
++    "project.structure.last.edited": "Modules",
++    "project.structure.proportion": "0.0",
++    "project.structure.side.proportion": "0.2"
+   }
+-}</component>
+-  <component name="RunManager" selected="Application.Sistema">
+-    <configuration name="Sistema" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+-      <option name="MAIN_CLASS_NAME" value="Sistema" />
++}]]></component>
++  <component name="RunManager" selected="Application.AdicionarProdutoLojaGui">
++    <configuration name="AdicionarProdutoLojaGui" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
++      <option name="MAIN_CLASS_NAME" value="gui.AdicionarProdutoLojaGui" />
++      <module name="ProjetoFinal-Poo" />
++      <extension name="coverage">
++        <pattern>
++          <option name="PATTERN" value="gui.*" />
++          <option name="ENABLED" value="true" />
++        </pattern>
++      </extension>
++      <method v="2">
++        <option name="Make" enabled="true" />
++      </method>
++    </configuration>
++    <configuration name="RemoverProdutoGui" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
++      <option name="MAIN_CLASS_NAME" value="gui.RemoverProdutoGui" />
+       <module name="ProjetoFinal-Poo" />
++      <extension name="coverage">
++        <pattern>
++          <option name="PATTERN" value="gui.*" />
++          <option name="ENABLED" value="true" />
++        </pattern>
++      </extension>
+       <method v="2">
+         <option name="Make" enabled="true" />
+       </method>
+     </configuration>
+-    <configuration name="dados.Loja" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+-      <option name="MAIN_CLASS_NAME" value="dados.Loja" />
++    <configuration name="gui.AlterarProdutoGui" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
++      <option name="MAIN_CLASS_NAME" value="gui.AlterarProdutoGui" />
+       <module name="ProjetoFinal-Poo" />
++      <extension name="coverage">
++        <pattern>
++          <option name="PATTERN" value="gui.*" />
++          <option name="ENABLED" value="true" />
++        </pattern>
++      </extension>
++      <method v="2">
++        <option name="Make" enabled="true" />
++      </method>
++    </configuration>
++    <configuration name="gui.ConsultarProdutoGui" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
++      <option name="MAIN_CLASS_NAME" value="gui.ConsultarProdutoGui" />
++      <module name="ProjetoFinal-Poo" />
++      <extension name="coverage">
++        <pattern>
++          <option name="PATTERN" value="gui.*" />
++          <option name="ENABLED" value="true" />
++        </pattern>
++      </extension>
++      <method v="2">
++        <option name="Make" enabled="true" />
++      </method>
++    </configuration>
++    <configuration name="gui.NovaLojaGui" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
++      <option name="MAIN_CLASS_NAME" value="gui.NovaLojaGui" />
++      <module name="ProjetoFinal-Poo" />
++      <extension name="coverage">
++        <pattern>
++          <option name="PATTERN" value="gui.*" />
++          <option name="ENABLED" value="true" />
++        </pattern>
++      </extension>
+       <method v="2">
+         <option name="Make" enabled="true" />
+       </method>
+     </configuration>
+     <recent_temporary>
+       <list>
+-        <item itemvalue="Application.Sistema" />
+-        <item itemvalue="Application.dados.Loja" />
++        <item itemvalue="Application.AdicionarProdutoLojaGui" />
++        <item itemvalue="Application.gui.AlterarProdutoGui" />
++        <item itemvalue="Application.gui.NovaLojaGui" />
++        <item itemvalue="Application.gui.ConsultarProdutoGui" />
++        <item itemvalue="Application.gui.RemoverProdutoGui" />
+       </list>
+     </recent_temporary>
+   </component>
